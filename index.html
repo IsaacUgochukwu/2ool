@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isaac Ugochukwu">
+    <meta name="description"
+        content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
+    <meta property="og:title" content="2ool">    
+    <meta property="og:image" content="https://2ool.vercel.app/bgimg.png">
+    <meta property="og:description" content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
+    <meta property="og:url" content="https://2ool.vercel.app">
+    <title>2ool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="bgimg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+</head>
+
+<script src="index.js"></script>
+
+<body onload="handleLoad()" onresize="handleResize()">
+    <h1>2ool</h1>
+
+    <p class="description"><span class="highlight">Yo Dev!</span> Instantly check device's width and height in pixels,
+        good for dealing with CSS media queries and breakpoints</p>
+
+    <div class="content">
+        <div class="first">
+            <p id="width" class="p"></p>
+            <p><button class="copy" onclick="copyw()" id="copyw">Copy</button></p>
+        </div>
+        <div class="second">
+            <p id="height" class="p"></p>
+            <p>
+                <button class="copy" onclick="copyh()" id="copyh">Copy</button>
+            </p>
+        </div>
+    </div>
+
+    <footer><p>Built with <span class="heart">&hearts;</span> by Isaac Ugochukwu</p></footer>
+</body>
+
+</html>
