@@ -7,9 +7,10 @@
     <meta name="author" content="Isaac Ugochukwu">
     <meta name="description"
         content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
-    <meta property="og:title" content="2ool">    
+    <meta property="og:title" content="2ool">
     <meta property="og:image" content="https://2ool.vercel.app/bgimg.png">
-    <meta property="og:description" content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
+    <meta property="og:description"
+        content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
     <meta property="og:url" content="https://2ool.vercel.app">
     <title>2ool</title>
     <link rel="stylesheet" href="style.css">
@@ -20,13 +21,35 @@
 
 <script src="index.js"></script>
 
-<body onload="handleLoad()" onresize="handleResize()">
-    <h1>2ool</h1>
+<body onload="handleLoad()" onresize="handleResize()" id="body">
+    <h1>2ool <span class="theme"><img src="sun.svg" alt="Light theme" width="40px" height="40px" id="lighttheme" onclick="light()"></span>
+        <script>
+            function light() {
+                const lighttheme = document.getElementById("lighttheme").style.display = "none";
+                const darktheme = document.getElementById("darktheme").style.display = "inline";
+                const body = document.getElementById("body");
+                body.style.backgroundColor = "papayawhip";
+                body.style.color = "black";
+                const content = document.getElementById("content").style.color = "black";
+            }
+        </script><span class="theme"><img src="moon.svg" alt="Dark theme" width="40px" height="40px" id="darktheme" onclick="dark()"></span>
+        <script>
+            function dark() {
+                const darktheme = document.getElementById("darktheme").style.display = "none";
+                const lighttheme = document.getElementById("lighttheme").style.display = "inline";
+                const body = document.getElementById("body");
+                body.style.backgroundColor = "#444";
+                body.style.color = "white";
+                const content = document.getElementById("content").style.color = "black";
+            }    
+        </script>
+    </h1>
+
 
     <p class="description"><span class="highlight">Yo Dev!</span> Instantly check device's width and height in pixels,
         good for dealing with CSS media queries and breakpoints</p>
 
-    <div class="content">
+    <div class="content" id="content">
         <div class="first">
             <p id="width" class="p"></p>
             <p><button class="copy" onclick="copyw()" id="copyw">Copy</button></p>
@@ -39,7 +62,9 @@
         </div>
     </div>
 
-    <footer><p>Built with <span class="heart">&hearts;</span> by Isaac Ugochukwu</p></footer>
+    <footer>
+        <p>Built with <span class="heart">&hearts;</span> by Isaac Ugochukwu</p>
+    </footer>
 </body>
 
 </html>
