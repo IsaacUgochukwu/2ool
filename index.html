@@ -2,69 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Isaac Ugochukwu">
-    <meta name="description"
-        content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
-    <meta property="og:title" content="2ool">
-    <meta property="og:image" content="https://2ool.vercel.app/bgimg.png">
-    <meta property="og:description"
-        content="Yo Dev! Instantly check device's width and height in pixels, good for dealing with CSS media queries and breakpoints">
-    <meta property="og:url" content="https://2ool.vercel.app">
-    <title>2ool</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="bgimg.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Isaac Ugochukwu">
+  <meta name="description" content="Aims to simplify CSS development...">
+  <meta property="og:title" content="2oolCSS">
+  <meta property="og:description" content="Aims to simplify CSS development...">
+  <meta property="og:url" content="https://2oolcss.vercel.app">
+  <title>2oolCSS :: Aims to simplify CSS development...</title>
+  <link rel="icon" href="bg.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<script src="index.js"></script>
+<body onload="handleLoad()" onresize="handleResize()" class="container">
+  <h1 class="h1 text-center my-4">2oolCSS</h1>
+  <p class="lead mx-auto mt-5 mb-5">
+    Aims to simplify CSS development by providing valuable insights into screen and browser dimensions. Greatly aid in responsive design and style optimization.
+  </p>
 
-<body onload="handleLoad()" onresize="handleResize()" id="body">
-    <h1>2ool <span class="theme"><img src="sun.svg" alt="Light theme" width="40px" height="40px" id="lighttheme" onclick="light()"></span>
-        <script>
-            function light() {
-                const lighttheme = document.getElementById("lighttheme").style.display = "none";
-                const darktheme = document.getElementById("darktheme").style.display = "inline";
-                const body = document.getElementById("body");
-                body.style.backgroundColor = "papayawhip";
-                body.style.color = "black";
-                const content = document.getElementById("content").style.color = "black";
-            }
-        </script><span class="theme"><img src="moon.svg" alt="Dark theme" width="40px" height="40px" id="darktheme" onclick="dark()"></span>
-        <script>
-            function dark() {
-                const darktheme = document.getElementById("darktheme").style.display = "none";
-                const lighttheme = document.getElementById("lighttheme").style.display = "inline";
-                const body = document.getElementById("body");
-                body.style.backgroundColor = "#444";
-                body.style.color = "white";
-                const content = document.getElementById("content").style.color = "black";
-            }    
-        </script>
-    </h1>
-
-
-    <p class="description"><span class="highlight">Yo Dev!</span> Instantly check device's width and height in pixels,
-        good for dealing with CSS media queries and breakpoints</p>
-
-    <div class="content" id="content">
-        <div class="first">
-            <p id="width" class="p"></p>
-            <p><button class="copy" onclick="copyw()" id="copyw">Copy</button></p>
-        </div>
-        <div class="second">
-            <p id="height" class="p"></p>
-            <p>
-                <button class="copy" onclick="copyh()" id="copyh">Copy</button>
-            </p>
-        </div>
+  <main class="main p-5 rounded-5 my-5 mx-auto">
+    <div class="d-flex justify-content-between my-3">
+      <span id="width" class="p"></span>
+      <button class="copy d-flex justify-content-center align-items-center" onclick="copyWidth()" id="copy-width"><img src="copy.svg" id="copy-img" alt="Copy" width="25" height="25"></button>
     </div>
+    <div class="d-flex justify-content-between my-3">
+      <span id="height" class="height"></span>
+        <button class="copy justify-content-center align-items-center" onclick="copyHeight()" id="copy-height"><img src="copy.svg" id="copy-img" alt="Copy" width="25" height="25"></button>
+    </div>
+  </main>
+  
+  <section class="d-flex justify-content-content align-items-center flex-column bg rounded-5 p-3 m-5 mx-auto">
+    <p class="text-center font-size-2 font-pacifico hover">Breakpoints</p>
+    <div class="font-monospace">
+    <span class="d-block fw-bold text-center my-3"><img src="bs.jpg" alt="Bootstrap" class="img"> Bootstrap</span>
+    <span class="d-block my-4">Larger Devices (Desktop) : <span class="red">>1200px</span></span>
+    <span class="d-block my-4">Medium Devices (Desktop) : <span class="red">>992px</span></span>
+    <span class="d-block my-4">Small Devices (Tablets) : <span class="red">>768px</span></span>
+    <span class="d-block my-4">Extra-small Devices (Phones) : <span class="red"> <768px</span></span>
+    </div>
+  </section>
+  
+  <section class="d-flex justify-content-center align-items-center flex-column rounded-3 feedback my-3 mx-auto">
+    <p>We'll like to get some feedbacks from you after utilizing 2ool. 🙏</p>
+    <button class="button py-1 px-1">Give feedback</button>
+  </section>
 
-    <footer>
-        <p>Built with <span class="heart">&hearts;</span> by Isaac Ugochukwu</p>
-    </footer>
+  <footer class="d-flex justify-content-center serif my-5">
+    <p>Built with <span class="heart">&hearts;</span> by Isaac Ugochukwu</p>
+  </footer>
+  
+  <!-- Load Script -->
+  <script src="index.js"></script>
 </body>
 
 </html>

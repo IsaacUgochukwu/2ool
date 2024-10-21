@@ -1,126 +1,115 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap");
+
+/* RESETS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+/* VARIABLES */
+:root {
+  /* TYPOGRAPHY */
+  --ff: "Afacad Flux", sans-serif;
+  --ff-head: "Pacifico", cursive;
+  
+  /* COLORS */
+  --color: white;
+  --bgcolor: #282A36;
+  --headcolor: #0B6477;
 }
 
+/* BASE STYLES */
 body {
-    font-size: 1.3rem;
-    background-color: papayawhip;
-    color: black;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  font-family: var(--ff);
+  font-size: 1rem;
+  color: var(--color);
+  background-color: var(--bgcolor);
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
 }
 
-h1 {
-    position: relative;
-    width: 80%;
-    font: 2.5rem "Roboto", sans-serif;
-    margin: 4rem auto;
-    border: thin solid papayawhip;
-    background: linear-gradient(to right, purple, blue);
-    border-radius: 2rem;
-    padding: 1rem;
-    color: whitesmoke;
-    letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 5px black;
-    text-align: center;
+.h1 {
+  font-family: var(--ff-head);
+  font-size: 4rem;
+  font-weight: bolder;
+  color: #BD93F9;
+  -webkit-text-stroke: thin white;
 }
 
-.theme {
-    cursor: pointer;
-    position: absolute;
-    top: 9px;
-    right: 30px;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    padding: 3px;
-    padding-top: 8px;
+.serif {
+  font-family: serif;
 }
 
-.theme:hover, .theme:active, .theme:focus {
-    background-color: rgb(197, 193, 193);
+.lead {
+  width: 85%;
 }
 
-.description {
-    width: 90%;
-    margin: 0 auto;
+.button {
+  width: 150px;
+  height: 50px;
+  border: 0;
+  border-radius: 2rem;
+  background-color: #50FA7B;
+  color: black;
+  transition: all ease 0.25s;
 }
 
-.highlight {
-    color: rgb(80, 2, 80);
-    text-shadow: 2px 2px 5px whitesmoke;
-    font-weight: 900;
-    font-size: 1.2em;
+.button:active, .button:focus, .button:hover {
+  color: white;
+  background-color: darkgreen;
+  transition: all ease 0.25s;
 }
 
-.content {
-    margin: 2.5rem auto 7rem auto;
-    border: thin solid purple;
-    border-radius: 2rem;
-    background-color: whitesmoke;
-    font-weight: bold;
-    padding: 0.25rem;
-    width: 80%;
+.feedback {
+  width: 90%;
+  height: auto;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: 3rem;
+  background-color: #6272A4;
+  margin: auto;
 }
 
-.first {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.second {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-p {
-    margin: 0.5rem 0;
+.main {
+  background-color: #44475A;
+  width: 90%;
 }
 
 .copy {
-    /* display: block; */
-    font: inherit;
-    font-weight: 100;
-    font-size: 1.2rem;
-    padding: 0.80rem;
-    border-radius: 2rem;
-    border: none;
-    margin: 0.5rem 0;
-    background-color: purple;
-    color: white;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 1rem;
 }
 
-.copy:hover, .copy:focus, .copy:active {
-    opacity: 0.75;
+.disabled {
+  opacity: 0.40;
+  pointer-events: none;
 }
 
-.heart {
-    color: red;
-    -webkit-text-stroke: thin black;
+.bg {
+  background: var(--bgcolor);
+  opacity: 0.80;
+  height: 500px;
+  width: 90%;
 }
 
-footer {
-    font-size: -1em;
-    background: linear-gradient(to right, purple, blue);
-    width: 100%;
-    height: 40px;
-    opacity: 0.95;
-    color: whitesmoke;
-    position: fixed;
-    bottom: 0;
-    text-shadow: 2px 2px 5px black;
+.red {
+  color: #FF5555;
 }
 
-footer p {
-    text-align: center;
+.font-pacifico {
+  font-family: var(--ff-head);
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
+.img {
+  width: 50px;
+  height: auto;
+  border-radius: 1rem;
+}
